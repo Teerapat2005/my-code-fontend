@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Iconbutter/Navbar';
 import Body_r from './Head/Headle/Body_r';
 import Table1 from './Body/Grapch/Table1';
@@ -10,13 +10,14 @@ import Icon_menu from './Head/Drawer/Icon_menu';
 import Informationinput from './Body/Grapch/Informationinput';
 
 function Input_peple() {
+  const [selectedDate, setSelectedDate] = useState('');
   return (
     <>
       <Navbar />
       <div className='px-2'>
         <div className='navbar border'>
-          <Icon_menu/>
-          <Body_r />
+          <Icon_menu selectedDate={selectedDate} />
+          <Body_r setSelectedDate={setSelectedDate} />
         </div>
       </div>
 

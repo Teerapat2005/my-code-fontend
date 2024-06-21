@@ -1,7 +1,7 @@
 import React from 'react'
-import Date from './Date'
+import My_Date from './My_Date'
 
-function Textbox () {
+function Textbox ({ setSelectedDate }) {
   return (
     <>
        <div>
@@ -10,7 +10,7 @@ function Textbox () {
             เดือน/ปี
          </div>
          <div className='h-10 px-3 pt-2 text-sm text-center text-bold bg-gray-300'>
-            <Date/>
+            <My_Date setSelectedDate={setSelectedDate} />
         </div>
 
        </div>

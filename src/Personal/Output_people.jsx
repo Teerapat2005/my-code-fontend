@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Iconbutter/Navbar';
 import Partner_input from './Body/Grapch/Partner_input';
 import Contract_grade from './Body/Grapch/Contract_grade';
@@ -10,13 +10,14 @@ import Outbody_r from './Head/Headle/Outbody_r';
 import Informationoutput from './Body/Grapch/Informationoutput';
 
 function Quit() {
+  const [selectedDate, setSelectedDate] = useState('');
   return (
     <>
       <Navbar />
       <div className='px-2'>
         <div className='navbar border'>
-          <Outicon_menu/>
-          <Outbody_r/>
+          <Outicon_menu selectedDate={selectedDate} />
+          <Outbody_r setSelectedDate={setSelectedDate} />
         </div>
       </div>
 

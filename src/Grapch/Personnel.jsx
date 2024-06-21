@@ -30,7 +30,7 @@ function Personnel() {
         labels: [],
         datasets: [
             {
-                label: 'จำนวนคน',
+                label: 'ม.ค.67',
                 data: [],
                 backgroundColor: ['#FF00CC', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB', '#FF00CC', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB', '#FF00CC', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB']
             }

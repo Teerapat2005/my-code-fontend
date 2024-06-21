@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Outbody_l from '../Headle/Outbody_l'
 
-function Outicon_menu() {
+function Outicon_menu({ selectedDate }) {
   return (
     <>
         <div className="drawer flex">
@@ -35,7 +35,7 @@ function Outicon_menu() {
       </ul>
     </div>
     <div className=''>
-      <Outbody_l/>
+      <Outbody_l selectedDate={selectedDate} />
     </div>
   </div>
   </>

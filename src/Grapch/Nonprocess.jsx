@@ -19,7 +19,7 @@ Chartjs.register(
     ChartDataLabels // ลงทะเบียนปลั๊กอิน
 );
 
-function Vong() { // เปลี่ยนชื่อฟังก์ชัน
+function Nonprocess() { // เปลี่ยนชื่อฟังก์ชัน
     const [chartData, setChartData] = useState({
         labels: [],
         datasets: [
@@ -107,4 +107,4 @@ function Vong() { // เปลี่ยนชื่อฟังก์ชัน
     );
 }
 
-export default Vong; // เปลี่ยนชื่อการส่งออก
+export default Nonprocess; // เปลี่ยนชื่อการส่งออก

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import Md from './Ecomponent/Md';
 
 import {
   Chart as ChartJS,

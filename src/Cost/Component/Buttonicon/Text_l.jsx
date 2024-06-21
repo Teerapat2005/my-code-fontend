@@ -1,6 +1,7 @@
 import React from 'react'
+import Date_month from './Date_month'
 
-function Text_l() {
+function Text_l({ selectedDate }) {
   return (
     <div>
      <div className='text-2xl px-2 font-bold'style={{ width: '500px' }}>
@@ -8,10 +9,9 @@ function Text_l() {
         Cotractor Cost
       </div>
       <div>
-        ค่าใช้จ่ายงานจ้างเหมา เมษายน พ.ศ.2567
+        ค่าใช้จ่ายงานจ้างเหมา <Date_month selectedDate={selectedDate} />
       </div>
      </div>
-
     </div>
   )
 }

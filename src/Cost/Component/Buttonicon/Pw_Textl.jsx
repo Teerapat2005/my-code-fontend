@@ -1,6 +1,7 @@
 import React from 'react'
+import Date_month from './Date_month'
 
-function Pw_Textl() {
+function Pw_Textl({ selectedDate }) {
   return (
     <div>
      <div className='text-2xl px-2 font-bold'style={{ width: '500px' }}>
@@ -8,7 +9,7 @@ function Pw_Textl() {
         Piece work
       </div>
       <div>
-        เมษายน พ.ศ.2567
+        <Date_month selectedDate={selectedDate} />
       </div>
      </div>
 

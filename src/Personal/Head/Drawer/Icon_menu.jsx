@@ -2,7 +2,7 @@ import React from 'react'
 import Body_l from '../Headle/Body_l'
 import { Link } from 'react-router-dom'
 
-function Icon_menu() {
+function Icon_menu ({ selectedDate }) {
   return (
     <>
         <div className="drawer flex">
@@ -35,7 +35,7 @@ function Icon_menu() {
       </ul>
     </div>
     <div className=''>
-      <Body_l/>
+      <Body_l selectedDate={selectedDate} />
     </div>
   </div>
   </>
