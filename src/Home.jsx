@@ -12,6 +12,25 @@ import Per_Cb from './Grapch/Per_Cb';
 
 function Home() {
   const [selectedMonth, setSelectedMonth] = useState(null);
+  const [selectedPart, setSelectedPart] = useState(null);
+  const [selectedDepartment, setSelectedDepartment] = useState(null);
+  const [selectedOwner, setSelectedOwner] = useState(null);
+
+  const handlePartChange = (part) => {
+    setSelectedPart(part);
+    setSelectedDepartment(null);
+    setSelectedOwner(null);
+  };
+
+  const handleDepartmentChange = (department) => {
+    setSelectedDepartment(department);
+    setSelectedOwner(null);
+  };
+
+  const handleOwnerChange = (owner) => {
+    setSelectedOwner(owner);
+  };
+
 
   return (
     <>
@@ -42,7 +61,15 @@ function Home() {
             </div>
           </div>
           <div>
-            <Head_tital selectedMonth={selectedMonth} setSelectedMonth={setSelectedMonth} />
+            <Head_tital 
+              selectedMonth={selectedMonth} 
+              setSelectedMonth={setSelectedMonth}
+              handlePartChange={handlePartChange}
+              handleDepartmentChange={handleDepartmentChange}
+              handleOwnerChange={handleOwnerChange}
+              selectedPart={selectedPart}
+              selectedDepartment={selectedDepartment}
+            />
           </div>
         </div>
       </div>
@@ -52,7 +79,7 @@ function Home() {
           <Per_P selectedDate={selectedMonth} />
         </div>
         <div className='w-1/2 border p-2'>
-          <Per_Cb />
+          <Per_Cb selectedPart={selectedPart} selectedDepartment={selectedDepartment} selectedOwner={selectedOwner} />
         </div>
       </div>
 

@@ -4,6 +4,17 @@ const Dropdown_MN_CO = ({ selectedDepartment }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const allOwners = [
+    { department: 'แผนก 1', owner: 'นาย ก1' },
+    { department: 'แผนก 2', owner: 'นาย ก2' },
+    { department: 'แผนก 3', owner: 'นาย ก3' },
+    { department: 'แผนก 4', owner: 'นาย ก4' },
+    { department: 'แผนก 5', owner: 'นาย ก5' },
+    { department: 'แผนก 6', owner: 'นาย ก6' },
+    { department: 'แผนก 7', owner: 'นาย ก7' },
+    { department: 'แผนก 8', owner: 'นาย ก8' },
+  ];
+
   const owners = {
     'แผนก 1': 'นาย ก1',
     'แผนก 2': 'นาย ก2',
@@ -25,7 +36,8 @@ const Dropdown_MN_CO = ({ selectedDepartment }) => {
   useEffect(() => {
     setSelectedOption(null);
   }, [selectedDepartment]);
-  
+
+  const availableOwners = selectedDepartment ? [owners[selectedDepartment]] : allOwners.map(item => item.owner);
 
   return (
     <div className="relative inline-block text-left">
@@ -55,23 +67,23 @@ const Dropdown_MN_CO = ({ selectedDepartment }) => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
           <div className="py-1" role="none">
-            {owners[selectedDepartment] && (
+            {availableOwners.map(option => (
               <a
                 href="#"
-                key={owners[selectedDepartment]}
-                className={`text-gray-700 block px-4 py-2 text-sm ${selectedOption === owners[selectedDepartment] ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
-                onClick={() => handleOptionClick(owners[selectedDepartment])}
+                key={option}
+                className={`text-gray-700 block px-4 py-2 text-sm ${selectedOption === option ? 'bg-gray-100' : 'hover:bg-gray-100'}`}
+                onClick={() => handleOptionClick(option)}
                 role="menuitem"
               >
-                {owners[selectedDepartment]}
+                {option}
               </a>
-            )}
+            ))}
           </div>
         </div>
       )}

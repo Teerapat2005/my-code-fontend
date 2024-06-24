@@ -4,6 +4,7 @@ const Dropdown_MN_SS = ({ selectedPart, onSelectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const allDepartments = ['แผนก 1', 'แผนก 2', 'แผนก 3', 'แผนก 4', 'แผนก 5', 'แผนก 6', 'แผนก 7', 'แผนก 8'];
   const departments = {
     'ส่วน ก': ['แผนก 1', 'แผนก 2'],
     'ส่วน ข': ['แผนก 3', 'แผนก 4'],
@@ -22,6 +23,8 @@ const Dropdown_MN_SS = ({ selectedPart, onSelectionChange }) => {
   useEffect(() => {
     setSelectedOption(null);
   }, [selectedPart]);
+
+  const availableDepartments = selectedPart ? departments[selectedPart] : allDepartments;
 
   return (
     <div className="relative inline-block text-left">
@@ -51,13 +54,13 @@ const Dropdown_MN_SS = ({ selectedPart, onSelectionChange }) => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
           <div className="py-1" role="none">
-            {(departments[selectedPart] || []).map(option => (
+            {availableDepartments.map(option => (
               <a
                 href="#"
                 key={option}

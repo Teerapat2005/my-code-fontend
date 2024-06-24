@@ -7,20 +7,7 @@ import Date_month from '../Cost/Component/Buttonicon/Date_month';
 import My_Date from '../Cost/Component/Buttonicon/My_Date';
 import Button_Reset from '../Cost/Component/Buttonicon/Button_Reset';
 
-const Head_tital = ({ selectedMonth, setSelectedMonth }) => {
-  const [selectedPart, setSelectedPart] = useState(null);
-  const [selectedDepartment, setSelectedDepartment] = useState(null);
-  
-
-  const handlePartChange = (part) => {
-    setSelectedPart(part);
-    setSelectedDepartment(null); // Reset department when part changes
-  };
-
-  const handleDepartmentChange = (department) => {
-    setSelectedDepartment(department);
-  };
-
+const Head_tital = ({ selectedMonth, setSelectedMonth, handlePartChange, handleDepartmentChange, handleOwnerChange, selectedPart, selectedDepartment }) => {
   return (
     <div className="bg-white p-4">
       <div className="flex justify-between items-center">
@@ -56,8 +43,8 @@ const Head_tital = ({ selectedMonth, setSelectedMonth }) => {
             </div>
           </div>
           <div className="ml-4 text-2xl font-bold">
-            <div style={{ width :'500px'}}>
-            <a className="">กำลังพลคู่ธุรกิจ</a> <br />
+            <div style={{ width: '500px' }}>
+              <a className="">กำลังพลคู่ธุรกิจ</a> <br />
             </div>
             <a className=""><Date_month selectedDate={selectedMonth} /></a>
           </div>
@@ -76,7 +63,7 @@ const Head_tital = ({ selectedMonth, setSelectedMonth }) => {
             </div>
             <div className='px-2'>
               <div className='h-8 w-44 px-2 text-left border-gray-300 font-bold text-white bg-gray-800'>เจ้าของสัญญา</div>
-              <div className='h-12 text-left text-bold bg-white text-lg'><Dropdown_MN_CO selectedDepartment={selectedDepartment} /></div>
+              <div className='h-12 text-left text-bold bg-white text-lg'><Dropdown_MN_CO selectedDepartment={selectedDepartment} onSelectionChange={handleOwnerChange} /></div>
             </div>
             <div className='px-2'>
               <div className='h-8 w-44 px-2 text-left border-gray-300 font-bold text-white bg-gray-800'>เดือน / ปี</div>

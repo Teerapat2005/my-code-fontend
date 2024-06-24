@@ -1,8 +1,6 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import Md from './Ecomponent/Md';
-import Md2 from './Ecomponent/Md2';
-
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -13,16 +11,17 @@ import {
 ChartJS.register(
   ArcElement,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 function Contract_parties() {
   const data = {
-    labels: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+    labels: ['A', 'B', 'C', 'D', 'E', 'F', 'No'],
     datasets: [
       {
         label: 'เกรด',
-        data: [3, 4, 2, 10, 7 , 10, 4],
+        data: [3, 4, 2, 10, 7, 10, 4],
         backgroundColor: ['#FF00CC', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB', '#cbd5e1', '#4b5563']
       }
     ]
@@ -38,9 +37,31 @@ function Contract_parties() {
       tooltip: {
         callbacks: {
           label: function (tooltipItem) {
-            return `${tooltipItem.label}: ${tooltipItem.raw}`;
+            const total = tooltipItem.dataset.data.reduce((sum, value) => sum + value, 0);
+            const value = tooltipItem.raw;
+            const percentage = ((value / total) * 100).toFixed(2);
+            return `${tooltipItem.label}: ${value} (${percentage}%)`;
           }
         }
+      },
+      datalabels: {
+        color: 'black',
+        font: {
+          weight: 'bold',
+          size: 16,
+        },
+        formatter: (value, context) => {
+          const total = context.chart.data.datasets[0].data.reduce((sum, value) => sum + value, 0);
+          const percentage = ((value / total) * 100).toFixed(2);
+          return `${value} (${percentage}%)`;
+        },
+        anchor: 'end',
+        align: 'end',
+        offset: 10,
+        borderColor: 'white',
+        borderWidth: 2,
+        borderRadius: 5,
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       }
     },
     layout: {
@@ -52,8 +73,8 @@ function Contract_parties() {
         borderRadius: 0,
       }
     },
-    radius: '80%', // ปรับรัศมีของกราฟวงกลม
-    cutout: '0%', // ปรับรัศมีภายใน (สำหรับกราฟ Doughnut)
+    radius: '80%',
+    cutout: '0%',
   };
 
   return (

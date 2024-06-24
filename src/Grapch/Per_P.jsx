@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 import { format, subMonths } from 'date-fns';
@@ -23,7 +23,6 @@ const generateChartData = (selectedDate) => {
       const date = subMonths(selected, i);
       dates.push(format(date, 'yyyy-MM', { locale: th }));
     }
-    colors = ['#336666', '#339999', '#ff6666', '#ffcc66'];
   } else {
     const now = new Date();
     for (let i = 3; i >= 0; i--) {
@@ -58,34 +57,13 @@ const generateChartData = (selectedDate) => {
     ]
   };
 
-  return data;
+  return { data, allData };
 };
 
 function Per_P({ selectedDate }) {
-  const data = generateChartData(selectedDate);
-
-  const options = {
-    plugins: {
-      datalabels: {
-        anchor: 'end',
-        align: 'end',
-        formatter: (value, context) => {
-          return value;
-        }
-      }
-    },
-    scales: {
-      y: {
-        ticks: {
-          beginAtZero: true,
-          callback: function (value, index, values) {
-            return value;
-          }
-        }
-      }
-    }
-  };
-
+  const { data, allData } = generateChartData(selectedDate);
+  const selectedMonthData = allData[selectedDate] || [0, 0, 0, 0];
+  
   return (
     <div className='p-3'>
       <div className='bg-gray-200'>
@@ -99,7 +77,7 @@ function Per_P({ selectedDate }) {
               คนในสัญญาประจำ
             </div>
             <div className='font-bold bg-white h-12 '>
-              0
+              {selectedMonthData[0]}
             </div>
           </div>   
 
@@ -108,7 +86,7 @@ function Per_P({ selectedDate }) {
              คนในสัญญาประจำมาปฏิบัติงานจริง
             </div>
             <div className='font-bold bg-white h-12 '>
-                0
+                {selectedMonthData[1]}
             </div>
           </div>   
 
@@ -117,7 +95,9 @@ function Per_P({ selectedDate }) {
              คนใน Piecework
             </div>
             <div className='font-bold bg-white h-12 '>
-                0
+
+              
+                {selectedMonthData[2]}
             </div>
           </div>   
 
@@ -126,13 +106,13 @@ function Per_P({ selectedDate }) {
             คนใน Pieceworkมาปฏิบัติงานจริง
             </div>
             <div className='font-bold bg-white h-12 '>
-                0
+                {selectedMonthData[3]}
             </div>
           </div>   
         </div>
 
         <div className='border-4 border-gray-300 bg-white'>
-          <Bar data={data} options={options}></Bar>
+          <Bar data={data} options={{ responsive: true, maintainAspectRatio: false }} style={{height : '352px'}}/>
         </div>
       </div>
     </div>
