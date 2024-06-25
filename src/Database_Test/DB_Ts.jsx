@@ -8,7 +8,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_26_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "25",
       อายุงาน: "5"
     },
@@ -21,7 +21,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_27_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -34,7 +34,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_28_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "28",
       อายุงาน: "4"
     },
@@ -47,7 +47,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_29_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -60,7 +60,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_30_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "26",
       อายุงาน: "3"
     },
@@ -73,7 +73,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_31_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "NO",
+      เกรด: "NO",
       อายุ: "27",
       อายุงาน: "5"
     },
@@ -86,7 +86,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_32_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "29",
       อายุงาน: "6"
     },
@@ -99,7 +99,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_33_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "31",
       อายุงาน: "7"
     },
@@ -112,7 +112,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_34_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "33",
       อายุงาน: "8"
     },
@@ -125,7 +125,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_35_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "34",
       อายุงาน: "9"
     },
@@ -138,7 +138,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_36_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "35",
       อายุงาน: "10"
     },
@@ -151,7 +151,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_37_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "NO",
+      เกรด: "NO",
       อายุ: "36",
       อายุงาน: "11"
     },
@@ -164,7 +164,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_38_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "37",
       อายุงาน: "12"
     },
@@ -177,7 +177,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_39_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "38",
       อายุงาน: "13"
     },
@@ -190,7 +190,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_40_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "39",
       อายุงาน: "14"
     },
@@ -203,7 +203,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_41_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "40",
       อายุงาน: "15"
     },
@@ -216,7 +216,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_42_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "41",
       อายุงาน: "16"
     },
@@ -229,7 +229,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_43_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "NO",
+      เกรด: "NO",
       อายุ: "42",
       อายุงาน: "17"
     },
@@ -242,7 +242,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_44_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "43",
       อายุงาน: "18"
     },
@@ -255,7 +255,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_45_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "44",
       อายุงาน: "19"
     },
@@ -268,7 +268,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_46_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "45",
       อายุงาน: "20"
     },
@@ -281,7 +281,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_47_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "46",
       อายุงาน: "21"
     },
@@ -294,7 +294,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_48_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "47",
       อายุงาน: "22"
     },
@@ -307,7 +307,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_49_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "NO",
+      เกรด: "NO",
       อายุ: "48",
       อายุงาน: "23"
     },
@@ -320,7 +320,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_50_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "49",
       อายุงาน: "24"
     },
@@ -333,7 +333,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_51_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "50",
       อายุงาน: "25"
     },
@@ -346,7 +346,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_52_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "51",
       อายุงาน: "26"
     },
@@ -359,7 +359,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_53_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "52",
       อายุงาน: "27"
     },
@@ -372,7 +372,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_54_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "53",
       อายุงาน: "28"
     },
@@ -385,7 +385,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_55_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "NO",
+      เกรด: "NO",
       อายุ: "54",
       อายุงาน: "29"
     },
@@ -398,7 +398,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_56_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "55",
       อายุงาน: "30"
     },
@@ -411,7 +411,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_57_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "56",
       อายุงาน: "31"
     },
@@ -424,7 +424,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_58_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "57",
       อายุงาน: "32"
     },
@@ -437,7 +437,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_59_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "58",
       อายุงาน: "33"
     },
@@ -450,7 +450,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_60_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "59",
       อายุงาน: "34"
     },
@@ -463,7 +463,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_61_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "No",
+      เกรด: "No",
       อายุ: "60",
       อายุงาน: "35"
     },
@@ -476,7 +476,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_62_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "31",
       อายุงาน: "8"
     },
@@ -489,7 +489,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_63_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "29",
       อายุงาน: "6"
     },
@@ -502,7 +502,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_64_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "28",
       อายุงาน: "5"
     },
@@ -515,7 +515,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_65_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -528,7 +528,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_66_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "27",
       อายุงาน: "4"
     },
@@ -541,7 +541,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_67_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "34",
       อายุงาน: "9"
     },
@@ -554,7 +554,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_68_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -567,7 +567,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_69_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "33",
       อายุงาน: "7"
     },
@@ -580,7 +580,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_70_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "35",
       อายุงาน: "10"
     },
@@ -593,7 +593,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_71_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -606,7 +606,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_72_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -619,7 +619,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_73_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -632,7 +632,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_74_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -645,7 +645,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_75_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -658,7 +658,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_76_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "33",
       อายุงาน: "7"
     },
@@ -671,7 +671,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_77_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "28",
       อายุงาน: "4"
     },
@@ -684,7 +684,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_78_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "E",
+      เกรด: "E",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -697,7 +697,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_79_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -710,7 +710,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_80_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -723,7 +723,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_81_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -736,7 +736,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_82_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -749,7 +749,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_83_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "28",
       อายุงาน: "4"
     },
@@ -762,7 +762,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_84_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -775,7 +775,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_85_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -788,7 +788,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_86_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -801,7 +801,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_87_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -814,7 +814,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_88_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "33",
       อายุงาน: "8"
     },
@@ -827,7 +827,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_89_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -840,7 +840,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_90_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -853,7 +853,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_91_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -866,7 +866,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_92_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "28",
       อายุงาน: "4"
     },
@@ -879,7 +879,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_93_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "27",
       อายุงาน: "4"
     },
@@ -892,7 +892,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_94_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -905,7 +905,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_95_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "D",
+      เกรด: "D",
       อายุ: "32",
       อายุงาน: "7"
     },
@@ -918,7 +918,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_96_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "31",
       อายุงาน: "6"
     },
@@ -931,7 +931,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_97_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     },
@@ -944,7 +944,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_98_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "B",
+      เกรด: "B",
       อายุ: "29",
       อายุงาน: "5"
     },
@@ -957,7 +957,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_99_2566",
       Process_NonProcess: "Process",
       Job: "เตรียม Biomass",
-      Grade: "C",
+      เกรด: "C",
       อายุ: "28",
       อายุงาน: "4"
     },
@@ -970,7 +970,7 @@ const DB_Ts = [
       สัญญา: "Ts_QR_100_2566",
       Process_NonProcess: "Non Process",
       Job: "เตรียม Biomass",
-      Grade: "A",
+      เกรด: "A",
       อายุ: "30",
       อายุงาน: "6"
     }

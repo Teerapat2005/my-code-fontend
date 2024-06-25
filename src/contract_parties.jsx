@@ -26,6 +26,7 @@ function Contract_parties() {
       }
     ]
   };
+  
 
   const options = {
     responsive: true,
