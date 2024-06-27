@@ -25,12 +25,12 @@ function Tang() {
       {
         label:'Model', 
         data: [33, 60, 12, 23, 19, 73, 41, 10, 1, 14, 11, 76],
-        backgroundColor: '#006666'
+        backgroundColor: '#0d3c45'
       },
       {
         label:'ส่วน', 
         data: [33, 6, 75, 23, 19, 10, 41, 10, 1, 14, 11, 8],
-        backgroundColor: '#339999'
+        backgroundColor: '#01b8aa'
       },
     ]
   };
@@ -58,7 +58,7 @@ function Tang() {
   };
 
   return (
-    <div className='p-3'>
+    <div className='p-1'style={{width : '1488px'}}>
       <div>
         <div className='border-2 border-black text-center font-bold text-lg text-white bg-black'>
         Model เทียบจำนวนคนจริงในฐานระบบ

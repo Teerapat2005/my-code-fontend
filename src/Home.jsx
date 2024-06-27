@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
-import Department from './DepartmentOPR';
 import Contract_parties from './contract_parties';
 import List from './EBusiness_partner/List';
 import Head_tital from './EBusiness_partner/Head_tital';
@@ -9,17 +8,28 @@ import Pagination from './Personal/Body/Button_nextpage/Pagination';
 import Tang from './Grapch/Tang';
 import Per_P from './Grapch/Per_P';
 import Per_Cb from './Grapch/Per_Cb';
+import BP_Grade from './Grapch/BP_Grade';
 
 function Home() {
   const [selectedMonth, setSelectedMonth] = useState(null);
   const [selectedPart, setSelectedPart] = useState(null);
   const [selectedDepartment, setSelectedDepartment] = useState(null);
   const [selectedOwner, setSelectedOwner] = useState(null);
+  const [selectedGrade, setSelectedGrade] = useState(null);
+  const [selectedGradeDepartment, setSelectedGradeDepartment] = useState(null);
+
+  const listRef = useRef(null);
 
   const handlePartChange = (part) => {
     setSelectedPart(part);
     setSelectedDepartment(null);
     setSelectedOwner(null);
+  };
+
+  const handleGradeClick = (grade, department) => {
+    setSelectedGrade(grade);
+    setSelectedGradeDepartment(department);
+    listRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleDepartmentChange = (department) => {
@@ -30,7 +40,6 @@ function Home() {
   const handleOwnerChange = (owner) => {
     setSelectedOwner(owner);
   };
-
 
   return (
     <>
@@ -88,18 +97,17 @@ function Home() {
       </div>
       <div className='flex flex-row'>
         <div className='w-1/2 border p-2'>
-          <Department />
+          <BP_Grade onGradeClick={handleGradeClick} />
         </div>
         <div className='w-1/2 border p-2'>
-          <Contract_parties />
+          <Contract_parties onGradeClick={handleGradeClick} />
         </div>
       </div>
 
-      <List />
-
-      <div className='flex justify-end p-2'>
-        <Pagination />
+      <div ref={listRef}>
+        <List selectedGrade={selectedGrade} selectedGradeDepartment={selectedGradeDepartment} />
       </div>
+
     </>
   );
 }

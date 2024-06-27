@@ -26,12 +26,12 @@ const Per_Cb = ({ selectedPart, selectedDepartment, selectedOwner }) => {
             {
                 label: 'Process',
                 data: [90, 20, 35, 50],
-                backgroundColor: '#FF0033'
+                backgroundColor: '#b84301'
             },
             {
                 label: 'Non Process',
                 data: [50, 80, 58, 50],
-                backgroundColor: '#CCFF33'
+                backgroundColor: '#f3c910'
             }
         ]
     };
@@ -46,32 +46,32 @@ const Per_Cb = ({ selectedPart, selectedDepartment, selectedOwner }) => {
                     updatedData = {
                         labels: ['แผนก 1', 'แผนก 2'],
                         datasets: [
-                            { label: 'Process', data: [50, 50], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [50, 50], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [50, 50], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [50, 50], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedPart === 'ส่วน ข') {
                     updatedData = {
                         labels: ['แผนก 3', 'แผนก 4'],
                         datasets: [
-                            { label: 'Process', data: [30, 70], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [40, 60], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [30, 70], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [40, 60], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedPart === 'ส่วน ค') {
                     updatedData = {
                         labels: ['แผนก 5', 'แผนก 6'],
                         datasets: [
-                            { label: 'Process', data: [90, 10], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [40, 60], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [90, 10], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [40, 60], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedPart === 'ส่วน ง') {
                     updatedData = {
                         labels: ['แผนก 7', 'แผนก 8'],
                         datasets: [
-                            { label: 'Process', data: [63, 17], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [45, 55], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [63, 17], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [45, 55], backgroundColor: '#f3c910' }
                         ]
                     };
                 }
@@ -81,64 +81,64 @@ const Per_Cb = ({ selectedPart, selectedDepartment, selectedOwner }) => {
                     updatedData = {
                         labels: ['นาย ก1'],
                         datasets: [
-                            { label: 'Process', data: [70], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [30], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [70], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [30], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 2') {
                     updatedData = {
                         labels: ['นาย ก2'],
                         datasets: [
-                            { label: 'Process', data: [30], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [70], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [30], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [70], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 3') {
                     updatedData = {
                         labels: ['นาย ก3'],
                         datasets: [
-                            { label: 'Process', data: [18], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [62], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [18], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [62], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 4') {
                     updatedData = {
                         labels: ['นาย ก4'],
                         datasets: [
-                            { label: 'Process', data: [52], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [48], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [52], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [48], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 5') {
                     updatedData = {
                         labels: ['นาย ก5'],
                         datasets: [
-                            { label: 'Process', data: [89], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [11], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [89], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [11], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 6') {
                     updatedData = {
                         labels: ['นาย ก6'],
                         datasets: [
-                            { label: 'Process', data: [43], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [57], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [43], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [57], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 7') {
                     updatedData = {
                         labels: ['นาย ก7'],
                         datasets: [
-                            { label: 'Process', data: [33], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [67], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [33], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [67], backgroundColor: '#f3c910' }
                         ]
                     };
                 } else if (selectedDepartment === 'แผนก 8') {
                     updatedData = {
                         labels: ['นาย ก8'],
                         datasets: [
-                            { label: 'Process', data: [14], backgroundColor: '#FF0033' },
-                            { label: 'Non Process', data: [66], backgroundColor: '#CCFF33' }
+                            { label: 'Process', data: [14], backgroundColor: '#b84301' },
+                            { label: 'Non Process', data: [66], backgroundColor: '#f3c910' }
                         ]
                     };
                 }
@@ -210,7 +210,7 @@ const Per_Cb = ({ selectedPart, selectedDepartment, selectedOwner }) => {
     };
 
     return (
-        <div className='p-3'>
+        <div className='p-1'>
             <div className='bg-gray-200'>
                 <div className='bg-black text-white text-center font-bold text-2xl'>
                     จำนวน แผนกในOprสัญญาแยกตามเกรด
@@ -234,7 +234,7 @@ const Per_Cb = ({ selectedPart, selectedDepartment, selectedOwner }) => {
                     </div>
                 </div>
             </div>
-            <div className='bg-white border-4 border-gray-300 p-2' style={{ width: '718px', height: '363px' }}>
+            <div className='bg-white border-4 border-gray-300 p-2' style={{ width: '734px', height: '363px' }}>
                 <Bar data={percentageData} options={options} />
             </div>
         </div>

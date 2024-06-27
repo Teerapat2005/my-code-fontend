@@ -1,64 +1,81 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import DB_Ts from '../Database_Test/DB_Ts';
+import Pagination from '../Personal/Body/Button_nextpage/Pagination';
 
-function List() {
+function List({ selectedGrade, selectedGradeDepartment }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedGrade, selectedGradeDepartment]);
+
+  const filteredEmployees = DB_Ts.filter(employee => {
+    return (!selectedGrade || employee.เกรด === selectedGrade) &&
+           (!selectedGradeDepartment || employee.แผนก === selectedGradeDepartment);
+  });
+
+  const totalPages = Math.ceil(filteredEmployees.length / itemsPerPage);
+  const currentEmployees = filteredEmployees.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
-    <> 
-    <div className='px-5 p-2'>
-  <div className="bg-gray-700 rounded-lg">
-    <p className="text-sm text-white p-2 shadow-2xl shadow-gray-900">
-      <a className='px-8'>ลำดับ</a>
-      <a className='px-8'>ชื่อ</a>
-      <a className='px-8'>สกุล</a>
-      <a className='px-16'>สังกัด/ทาง</a>
-      <a className='px-20'>ส่วน</a>
-      <a className='px-16'>สัญญา</a>
-      <a className='px-8'>Process/Non Process</a>
-      <a className='px-8'>job title</a>
-      <a className='px-8'>Grade</a>
-      <a className='px-8'>อายุ(ปี)</a>
-      <a className='px-8'>อายุงาน</a>
-    </p>
-  </div>
-</div>
+    <>
+      <div className='px-3 p-2'>
+        <div className="bg-gray-700 rounded-lg">
+          <div className="text-sm text-white p-2 grid grid-cols-12 gap-x-2">
+            <span className='col-span-1 text-center'>ลำดับ</span>
+            <span className='col-span-1 text-center'>ชื่อ</span>
+            <span className='col-span-1 text-center'>สกุล</span>
+            <span className='col-span-1 text-center'>สังกัด/ทาง</span>
+            <span className='col-span-1 text-center'>ส่วน</span>
+            <span className='col-span-1 text-center'>แผนก</span>
+            <span className='col-span-1 text-center'>สัญญา</span>
+            <span className='col-span-1 text-center'>Process/Non Process</span>
+            <span className='col-span-1 text-center'>job title</span>
+            <span className='col-span-1 text-center'>Grade</span>
+            <span className='col-span-1 text-center'>อายุ(ปี)</span>
+            <span className='col-span-1 text-center'>อายุงาน</span>
+          </div>
+        </div>
+      </div>
 
-<div className='px-5 p-1'>
-  <div className="bg-white rounded-lg">
-    <p className="text-sm text-black p-2 shadow shadow-gray-303.00 rounded-lg">
-      <a className='px-11'>1</a>
-      <a className='px-5'>ธีรภัทร์</a>
-      <a className='px-8'>วั่นเล่ง</a>
-      <a className='px-10'>หจก.นครแอร์คอม</a>
-      <a className='px-7'>Digital Tranformation</a>
-      <a className='px-10'>TS_QR_13_2567</a>
-      <a className='px-14'>Non Process</a>
-      <a className='px-1'>Graphic Design</a>
-      <a className='px-12'>A+</a>
-      <a className='px-10'>1</a>
-      <a className='px-16'>1</a>
-    </p>
-  </div>
-</div>
+      {currentEmployees.map((employee, index) => (
+        <div className='pl-3 p-1 px-3' key={index}>
+          <div className="bg-white rounded-lg">
+            <div className="text-sm text-black p-2 grid grid-cols-12 gap-x-2 rounded-lg shadow-md">
+              <span className='col-span-1 text-center'>{(currentPage - 1) * itemsPerPage + index + 1}</span>
+              <span className='col-span-1 text-center'>{employee.ชื่อ}</span>
+              <span className='col-span-1 text-center'>{employee.สกุล}</span>
+              <span className='col-span-1 text-center'>{employee.สังกัด}</span>
+              <span className='col-span-1 text-center'>{employee.ส่วน}</span>
+              <span className='col-span-1 text-center'>{employee.แผนก}</span>
+              <span className='col-span-1 text-center'>{employee.สัญญา}</span>
+              <span className='col-span-1 text-center'>{employee.Process_NonProcess}</span>
+              <span className='col-span-1 text-center'>{employee.Job}</span>
+              <span className='col-span-1 text-center'>{employee.เกรด}</span>
+              <span className='col-span-1 text-center'>{employee.อายุ}</span>
+              <span className='col-span-1 text-center'>{employee.อายุงาน}</span>
+            </div>
+          </div>
+        </div>
+      ))}
 
-<div className='px-5 p-1'>
-  <div className="bg-white rounded-lg">
-    <p className="text-sm text-black p-2 shadow shadow-gray-300 rounded-lg">
-      <a className='px-11'>2</a>
-      <a className='px-5'>ธนภัทร</a>
-      <a className='px-5'>รัตนสุคนธ์</a>
-      <a className='px-10'>หจก.นครแอร์คอม</a>
-      <a className='px-7'>Digital Tranformation</a>
-      <a className='px-10'>TS_QR_13_2567</a>
-      <a className='px-14'>Non Process</a>
-      <a className='px-1'>Graphic Design</a>
-      <a className='px-12'>A+</a>
-      <a className='px-10'>1</a>
-      <a className='px-16'>1</a>
-    </p>
-  </div>
-</div>
-
+      <div className='flex justify-end p-2'>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </>
-  )
+  );
 }
 
-export default List
+export default List;

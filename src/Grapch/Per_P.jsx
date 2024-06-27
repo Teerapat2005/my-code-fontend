@@ -15,7 +15,7 @@ const generateChartData = (selectedDate) => {
   };
 
   let dates = [];
-  let colors = ['#336666', '#339999', '#ff6666', '#ffcc66'];
+  let colors = ['#0d3c45', '#01b8aa', '#fd625e', '#f3c910'];
 
   if (selectedDate) {
     const selected = new Date(selectedDate);
@@ -65,7 +65,7 @@ function Per_P({ selectedDate }) {
   const selectedMonthData = allData[selectedDate] || [0, 0, 0, 0];
   
   return (
-    <div className='p-3'>
+    <div className='p-1'>
       <div className='bg-gray-200'>
         <div className='border-2 border-black text-center font-bold text-lg text-white bg-black'>
           กำลังพล(คน)

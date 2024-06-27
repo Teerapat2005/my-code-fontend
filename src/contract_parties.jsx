@@ -7,6 +7,7 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import DB_Ts from './Database_Test/DB_Ts';
 
 ChartJS.register(
   ArcElement,
@@ -15,18 +16,29 @@ ChartJS.register(
   ChartDataLabels
 );
 
-function Contract_parties() {
+function Contract_parties({ onGradeClick }) {
+  const gradeCounts = DB_Ts.reduce((counts, item) => {
+    counts[item.เกรด] = (counts[item.เกรด] || 0) + 1;
+    return counts;
+  }, {});
+
   const data = {
-    labels: ['A', 'B', 'C', 'D', 'E', 'F', 'No'],
+    labels: ['A', 'B', 'C', 'D', 'E', 'NO'],
     datasets: [
       {
         label: 'เกรด',
-        data: [3, 4, 2, 10, 7, 10, 4],
-        backgroundColor: ['#FF00CC', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB', '#cbd5e1', '#4b5563']
+        data: [
+          gradeCounts['A'] || 0,
+          gradeCounts['B'] || 0,
+          gradeCounts['C'] || 0,
+          gradeCounts['D'] || 0,
+          gradeCounts['E'] || 0,
+          gradeCounts['NO'] || 0,
+        ],
+        backgroundColor: ['#fd625e', '#f3c910', '#0d3c45', '#01b8aa', '#676d6e', '#b84301']
       }
     ]
   };
-  
 
   const options = {
     responsive: true,
@@ -76,10 +88,17 @@ function Contract_parties() {
     },
     radius: '80%',
     cutout: '0%',
+    onClick: (event, elements) => {
+      if (elements.length > 0) {
+        const elementIndex = elements[0].index;
+        const grade = data.labels[elementIndex];
+        onGradeClick(grade);
+      }
+    }
   };
 
   return (
-    <div className='p-3 h-'>
+    <div className='p-1'>
       <div>
         <div className='border-4 border-black text-center font-bold text-lg text-white bg-black'>
           จำนวนคู่สัญญาเเยกตามเกรด
