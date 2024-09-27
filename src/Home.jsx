@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Contract_parties from './contract_parties';
 import List from './EBusiness_partner/List';
 import Head_tital from './EBusiness_partner/Head_tital';
-import Pagination from './Personal/Body/Button_nextpage/Pagination';
-import Tang from './Grapch/Tang';
+import Tang from './Grapch/Tang'; 
 import Per_P from './Grapch/Per_P';
 import Per_Cb from './Grapch/Per_Cb';
 import BP_Grade from './Grapch/BP_Grade';
@@ -17,6 +16,8 @@ function Home() {
   const [selectedOwner, setSelectedOwner] = useState(null);
   const [selectedGrade, setSelectedGrade] = useState(null);
   const [selectedGradeDepartment, setSelectedGradeDepartment] = useState(null);
+  const [selectedEmployeeType, setSelectedEmployeeType] = useState(null);
+  const [selectedEmployeeLabel, setSelectedEmployeeLabel] = useState(null);
 
   const listRef = useRef(null);
 
@@ -39,6 +40,14 @@ function Home() {
 
   const handleOwnerChange = (owner) => {
     setSelectedOwner(owner);
+  };
+
+  const handleBarClick = ({ part, department, type, label }) => {
+    setSelectedPart(part);
+    setSelectedDepartment(department);
+    setSelectedEmployeeType(type);
+    setSelectedEmployeeLabel(label);
+    listRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -88,7 +97,7 @@ function Home() {
           <Per_P selectedDate={selectedMonth} />
         </div>
         <div className='w-1/2 border p-2'>
-          <Per_Cb selectedPart={selectedPart} selectedDepartment={selectedDepartment} selectedOwner={selectedOwner} />
+          <Per_Cb selectedPart={selectedPart} selectedDepartment={selectedDepartment} selectedOwner={selectedOwner} onBarClick={handleBarClick} />
         </div>
       </div>
 
@@ -105,7 +114,7 @@ function Home() {
       </div>
 
       <div ref={listRef}>
-        <List selectedGrade={selectedGrade} selectedGradeDepartment={selectedGradeDepartment} />
+        <List selectedGrade={selectedGrade} selectedGradeDepartment={selectedGradeDepartment} selectedEmployeeType={selectedEmployeeType} selectedEmployeeLabel={selectedEmployeeLabel} />
       </div>
 
     </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 import {
   Chart as ChartJS,
@@ -15,59 +16,86 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 function Tang() {
   const data = {
-    labels: ['CO', 'MRO', 'Mining', 'SD', 'MD', 'HR', 'Opr', 'Qr', 'BSE', 'DDV', 'ID', 'SD'],
+    labels: ['แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR', 'แผนกใน OPR'],
     datasets: [
       {
-        label:'Model', 
-        data: [33, 60, 12, 23, 19, 73, 41, 10, 1, 14, 11, 76],
+        label: 'Model',
+        data: [155, 85, 71, 62, 145, 50, 130, 92, 149, 122, 179, 99],
         backgroundColor: '#0d3c45'
       },
       {
-        label:'ส่วน', 
-        data: [33, 6, 75, 23, 19, 10, 41, 10, 1, 14, 11, 8],
+        label: 'Contractor',
+        data: [120, 185, 85, 110, 179, 99, 150, 130, 130, 90, 144, 81],
         backgroundColor: '#01b8aa'
       },
     ]
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       datalabels: {
         anchor: 'end',
         align: 'end',
-        formatter: (value, context) => {
-          return value;
+        formatter: (value) => value,
+        color: 'black',
+        font: {
+          weight: 'bold'
         }
+      },
+      legend: {
+        position: 'top',
+        labels: {
+          font: {
+            size: 16
+          }
+        }
+      },
+      tooltip: {
+        enabled: true
       }
     },
     scales: {
       x: {
-        stacked: true,
-    },
-    y: {
         beginAtZero: true,
-        stacked: true,
-        max: 100  
-    }
+        grid: {
+          display: false
+        },
+        ticks: {
+          font: {
+            size: 14
+          }
+        }
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 50,
+          font: {
+            size: 14
+          }
+        }
+      }
     }
   };
 
   return (
-    <div className='p-1'style={{width : '1488px'}}>
+    <div className='p-1' >
       <div>
-        <div className='border-2 border-black text-center font-bold text-lg text-white bg-black'>
-        Model เทียบจำนวนคนจริงในฐานระบบ
+        <div className='border-2 border-black h-12 flex items-center justify-center font-bold text-2xl text-white bg-black'>
+          Model เทียบจำนวนคนจริงในฐานระบบ
         </div>
-        <div className= 'border-4 px-32 border-gray-300'style={{ width: '1480px', height: '600px' }}>
-          <Bar data={data} options={options}></Bar>
+        <div className='border-4 border-gray-300' style={{ width: '100%', height: '500px' }}>
+          <Bar data={data} options={options} plugins={[ChartDataLabels]}></Bar>
         </div>
       </div>
-      
     </div>
   );
 }

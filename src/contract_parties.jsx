@@ -103,7 +103,7 @@ function Contract_parties({ onGradeClick }) {
         <div className='border-4 border-black text-center font-bold text-lg text-white bg-black'>
           จำนวนคู่สัญญาเเยกตามเกรด
         </div>
-        <div className='border-4 border-gray-300 w-full' style={{ height: "410px" }}>
+        <div className='border-4 border-gray-300 w-full' style={{ height: "414px" }}>
           <Pie data={data} options={options}></Pie>
         </div>
       </div>

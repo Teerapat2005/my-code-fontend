@@ -98,7 +98,7 @@ const BP_Grade = ({ onGradeClick }) => {
 
   return (
     <div className='p-1'>
-      <div className='border-2 border-black text-center font-bold text-lg text-white bg-black'>
+      <div className='border-2 h-9 border-black text-center font-bold text-lg text-white bg-black'>
         จำนวนคู่ธุรกิจสัญญาแยกตามเกรด
       </div>
       <div className='border-4 border-gray-300 ' style={{ height: '414px' }}>

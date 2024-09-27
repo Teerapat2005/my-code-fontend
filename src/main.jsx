@@ -12,6 +12,7 @@ import Output_people from "./Personal/Output_people";
 import Contractor_cost from "./Cost/Contractor_cost";
 import Operation from "./Cost/Operation";
 import Piecework from "./Cost/Piecework";
+import Form1 from "./pages/UserManpower/Form1";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/Pw",
     element: <Piecework/>
+  },
+  {
+    path: "/manpower",
+    element: <Form1/>
   },
   
 ]);
